@@ -10,9 +10,10 @@ for line in lines:
 
 list1.sort(reverse=False)
 list2.sort(reverse=False)
-for i in range(len(list1)):
-    if list1[i]<list2[i]:
-        total+=list2[i]-list1[i]
-    if list1[i]>list2[i]:
-            total+=list1[i]-list2[i]
+for num in list1:
+    mult: int =0
+    for num2 in list2:
+        if num2 == num:
+            mult+=1
+    total+= num*mult
 print(total)
